@@ -4,7 +4,7 @@ const productos = [
     { id: 3, nombre: "Chaqueta Cortaviento", categoria: "Abrigos", precio: 55000, img: "img/chaqueta.jpg" },
     { id: 4, nombre: "Zapatillas Urbanas", categoria: "Calzado", precio: 48000, img: "img/zapatilla.jpg" },
     { id: 5, nombre: "Gorro Vitus", categoria: "Ropa Superior", precio: 21000, img: "img/gorro.jpg" },
-    { id: 6, nombre: "Pantalón de Buzo", categoria: "Pantalones", precio: 29000, img: "img/pantalon.jpg" }
+    { id: 6, nombre: "Pantalón de Buzo", categoria: "Pantalones", precio: 29000, img: "img/buzo.jpg" }
 ];
 
 
