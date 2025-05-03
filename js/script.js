@@ -90,10 +90,10 @@ function eliminarDelCarrito(productoId) {
 
 function vaciarCarrito() {
    
-    if (confirm("¿Estás seguro de que quieres vaciar el carrito?")) {
+    if (confirm("¿Estás seguro de que quieres realizar la compra?")) {
         carrito = [];
         actualizarCarrito(); 
-        mostrarNotificacion("Carrito vaciado.");
+        mostrarNotificacion("Compra realizada. (Simulacion)");
     }
 }
 
@@ -190,7 +190,7 @@ clearCartBtn.addEventListener('click', vaciarCarrito);
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("Vitus Store - DOM listo.");
+    console.log("Vitus - Proyecto CoderHouse");
     renderizarProductos(productos);
     actualizarCarrito(); 
 });
