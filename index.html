@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitus - Tienda de Ropa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <img src="img/logo.png" alt="Logo de Vitus" class="site-logo">
+        <nav>
+            <span id="ver-carrito">🛒 Carrito (<span id="cart-count">0</span>)</span>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Nuestros Productos</h2>
+        <div id="product-container" class="product-grid">
+            </div>
+
+        
+
+        <h2 id="container-text">Carrito de Compras</h2>
+        <div id="cart-container">
+            <p id="empty-cart-msg">El carrito está vacío.</p>
+            <ul id="cart-items">
+                </ul>
+            <p><strong>Total: $<span id="cart-total">0</span></strong></p>
+            <button id="clear-cart-btn" class="hidden">Vaciar Carrito</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Vitus Store. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

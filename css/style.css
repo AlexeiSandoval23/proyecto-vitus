@@ -1,0 +1,317 @@
+:root {
+    --bg-dark: #1f1f1f;          /* Fondo principal oscuro */
+    --bg-card: #2a2a2a;          /* Fondo tarjetas/secciones */
+    --text-light: #e0e0e0;       /* Texto principal claro */
+    --text-secondary: #a0a0a0;   /* Texto secundario/grisáceo */
+    --accent-color: #ffffff;     /* Color de acento (cyan/turquesa) */
+    --accent-hover: #ad3632;     /* Color de acento al pasar el mouse */
+    --border-color: #444;        /* Color para bordes sutiles */
+    --danger-color: #9c0603;     /* Rojo para eliminar/alertas */
+    --warning-color: #860000;    /* Amarillo para vaciar/advertencias */
+
+    --font-primary: 'Open Sans', sans-serif;
+    --font-headings: 'Montserrat', sans-serif;
+
+    --shadow-light: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --shadow-medium: 0 6px 12px rgba(0, 0, 0, 0.3);
+    --border-radius: 8px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header .site-logo {
+    height: 50px;
+    width: auto;  
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headings);
+    color: var(--text-light); 
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+header {
+    background-color: var(--bg-card);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-light);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-color); 
+    margin: 0;
+}
+
+header nav span#ver-carrito {
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    transition: color 0.2s ease;
+}
+header nav span#ver-carrito:hover {
+    color: var(--accent-color);
+}
+header nav span#cart-count {
+    background-color: var(--accent-color);
+    color: var(--bg-dark);
+    border-radius: 50%;
+    padding: 0.1rem 0.5rem;
+    font-size: 0.9rem;
+    margin-left: 0.3rem;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+main > h2 { 
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+    color: var(--text-light);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+main > h2:first-of-type,
+#cart-container > h2 {
+    text-align: center;
+}
+
+#container-text{
+    margin-top: 20px;
+}
+
+
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 2rem; 
+}
+
+.product-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; 
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+}
+
+.product-card img {
+    max-width: 100%; 
+    display: block;         
+    margin-bottom: 1rem; 
+    border-radius: 4px;     
+}
+
+.product-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    color: var(--text-light);
+    flex-grow: 1;
+}
+
+.product-card p { 
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: var(--bg-dark); 
+    border: none;
+    padding: 0.7rem 1.5rem; 
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--font-primary);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    text-transform: uppercase; 
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+}
+button:active {
+     transform: translateY(0px); 
+}
+
+.remove-item-btn {
+    background-color: var(--danger-color);
+    color: var(--text-light); 
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+}
+.remove-item-btn:hover {
+    background-color: #c62828; 
+}
+
+#clear-cart-btn {
+    background-color: var(--warning-color);
+    color: var(--text-light);
+    display: block;
+    margin: 1.5rem auto 0;
+}
+#clear-cart-btn:hover {
+    background-color: #250000;
+}
+
+#cart-container {
+    margin-top: 3rem;
+    background-color: var(--bg-card);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-light);
+}
+
+#cart-container > h2 { 
+     margin-bottom: 1.5rem;
+     text-align: center;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0; 
+}
+
+#cart-items li {
+    padding: 1rem 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+#cart-items li:hover {
+    background-color: rgba(255, 255, 255, 0.05); 
+}
+
+#cart-items li:last-child {
+    border-bottom: none;
+}
+
+#cart-items span {
+    margin-right: 1rem;
+}
+#cart-items span:first-child { 
+    flex-grow: 1;
+    color: var(--text-light);
+}
+#cart-items span:nth-child(2) { 
+     font-weight: 600;
+     min-width: 100px;
+     text-align: right;
+     color: var(--text-light);
+}
+
+#cart-container p#empty-cart-msg {
+    text-align: center;
+    color: var(--text-secondary);
+    font-style: italic;
+    padding: 2rem 0;
+}
+
+#cart-container > p:last-of-type {
+    text-align: right;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border-color);
+}
+#cart-container > p:last-of-type span {
+     color: var(--accent-color);
+}
+
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 1.5rem;
+    background-color: var(--bg-card);
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+
+.notification {
+    position: fixed;
+    bottom: 30px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--accent-color);
+    color: var(--bg-dark);
+    padding: 12px 25px;
+    border-radius: 5px;
+    z-index: 1000;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: var(--shadow-medium);
+    opacity: 0; 
+    transition: opacity 0.3s ease, bottom 0.3s ease;
+}
+
+body.show-notification .notification {
+    opacity: 1;
+    bottom: 40px; 
+}
+
+
+.hidden {
+    display: none !important;
+}
